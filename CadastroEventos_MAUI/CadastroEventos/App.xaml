@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroEventos.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Navy">#17324D</Color>
+            <Color x:Key="NavyLight">#244A69</Color>
+            <Color x:Key="Teal">#1A8A83</Color>
+            <Color x:Key="TealSoft">#E7F4F2</Color>
+            <Color x:Key="Canvas">#F4F7FA</Color>
+            <Color x:Key="Surface">#FFFFFF</Color>
+            <Color x:Key="Ink">#1D2A36</Color>
+            <Color x:Key="Muted">#6B7B89</Color>
+            <Color x:Key="Line">#DCE5EC</Color>
+            <Color x:Key="Gold">#D9A441</Color>
+
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource Canvas}" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource Ink}" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource Ink}" />
+                <Setter Property="PlaceholderColor" Value="{StaticResource Muted}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="FontSize" Value="15" />
+            </Style>
+
+            <Style TargetType="DatePicker">
+                <Setter Property="TextColor" Value="{StaticResource Ink}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="FontSize" Value="15" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,8 @@
+ENTREGA - CADASTRO DE EVENTOS (.NET MAUI)
+
+1. Publique no GitHub o conteúdo inteiro desta pasta, mantendo a pasta CadastroEventos e o arquivo CadastroEventos.sln na raiz.
+2. O PDF da documentação visual está em Documentacao/Previa_Visual_Cadastro_Eventos.pdf.
+3. As imagens PNG também estão em Documentacao/Previa_Visual/.
+4. As imagens estão marcadas como PRÉVIAS: elas ilustram o layout, mas não são capturas reais de um app executado.
+
+O projeto-fonte está em CadastroEventos/CadastroEventos.csproj e foi configurado para Android com .NET 10 MAUI.

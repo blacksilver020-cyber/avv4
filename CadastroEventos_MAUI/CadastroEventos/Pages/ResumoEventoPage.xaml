@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroEventos.Pages.ResumoEventoPage"
+             Title="Resumo do Evento">
+    <ScrollView>
+        <VerticalStackLayout Padding="22,24,22,30" Spacing="18">
+            <VerticalStackLayout Spacing="6">
+                <Label Text="CADASTRO CONCLUÍDO"
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource Teal}"
+                       CharacterSpacing="1.5" />
+                <Label Text="Resumo do evento"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource Navy}" />
+                <Label Text="Confira os dados e o investimento estimado do seu evento."
+                       FontSize="14"
+                       TextColor="{StaticResource Muted}" />
+            </VerticalStackLayout>
+
+            <Border BackgroundColor="{StaticResource Navy}"
+                    Stroke="{StaticResource Navy}"
+                    StrokeShape="RoundRectangle 20"
+                    Padding="20">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="EVENTO" FontSize="11" FontAttributes="Bold" TextColor="#B9D5E2" CharacterSpacing="1.5" />
+                    <Label Text="{Binding NomeEvento}"
+                           FontSize="23"
+                           FontAttributes="Bold"
+                           TextColor="White" />
+                    <Label Text="{Binding LocalEvento}"
+                           FontSize="14"
+                           TextColor="#DCEAF1" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border BackgroundColor="{StaticResource Surface}"
+                    Stroke="{StaticResource Line}"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 18"
+                    Padding="18">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="DETALHES DO CADASTRO"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource NavyLight}"
+                           CharacterSpacing="1" />
+
+                    <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="13">
+                        <Label Text="Data de início" TextColor="{StaticResource Muted}" FontSize="14" />
+                        <Label Grid.Column="1" Text="{Binding DataInicioFormatada}" FontAttributes="Bold" HorizontalTextAlignment="End" />
+
+                        <Label Grid.Row="1" Text="Data de término" TextColor="{StaticResource Muted}" FontSize="14" />
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataTerminoFormatada}" FontAttributes="Bold" HorizontalTextAlignment="End" />
+
+                        <Label Grid.Row="2" Text="Duração" TextColor="{StaticResource Muted}" FontSize="14" />
+                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding DuracaoFormatada}" FontAttributes="Bold" HorizontalTextAlignment="End" />
+
+                        <Label Grid.Row="3" Text="Participantes" TextColor="{StaticResource Muted}" FontSize="14" />
+                        <Label Grid.Row="3" Grid.Column="1" Text="{Binding NumeroParticipantesFormatado}" FontAttributes="Bold" HorizontalTextAlignment="End" />
+
+                        <Label Grid.Row="4" Text="Custo por participante" TextColor="{StaticResource Muted}" FontSize="14" />
+                        <Label Grid.Row="4" Grid.Column="1" Text="{Binding CustoPorParticipanteFormatado}" FontAttributes="Bold" HorizontalTextAlignment="End" />
+
+                        <Label Grid.Row="5" Text="Local" TextColor="{StaticResource Muted}" FontSize="14" />
+                        <Label Grid.Row="5" Grid.Column="1" Text="{Binding LocalEvento}" FontAttributes="Bold" HorizontalTextAlignment="End" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border BackgroundColor="{StaticResource TealSoft}"
+                    Stroke="#C9E5E1"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 18"
+                    Padding="18">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="CUSTO TOTAL DO EVENTO"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Teal}"
+                           CharacterSpacing="1" />
+                    <Label Text="{Binding CustoTotalFormatado}"
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Navy}" />
+                    <Label Text="Cálculo: número de participantes × custo por participante."
+                           FontSize="12"
+                           TextColor="{StaticResource Muted}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Button Text="Voltar ao cadastro"
+                    Clicked="OnVoltarClicked"
+                    BackgroundColor="{StaticResource Navy}"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HeightRequest="54"
+                    CornerRadius="15" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

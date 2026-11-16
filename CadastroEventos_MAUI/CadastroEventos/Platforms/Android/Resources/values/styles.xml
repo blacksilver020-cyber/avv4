@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <style name="Maui.MainTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:colorAccent">#1A8A83</item>
+        <item name="android:statusBarColor">#17324D</item>
+        <item name="android:navigationBarColor">#17324D</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="Maui.SplashTheme" parent="Maui.MainTheme">
+        <item name="android:windowBackground">@drawable/maui_splash_image</item>
+    </style>
+</resources>
